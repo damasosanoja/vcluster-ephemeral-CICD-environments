@@ -1,0 +1,2 @@
+vcluster:
+  image: rancher/k3s:v1.27.5-k3s1 # Image to use for the virtual cluster
