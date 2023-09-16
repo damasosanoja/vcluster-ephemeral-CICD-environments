@@ -13,7 +13,7 @@ provider "helm" {
 }
 
 resource "helm_release" "vcluster-v1275" {
-  count = 1
+  count = 2
   namespace = "vcluster-k3s1275--${count.index}"
   name      = "vcluster-k3s1275-${count.index}"
   repository       = "https://charts.loft.sh"
