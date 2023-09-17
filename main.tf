@@ -2,13 +2,19 @@ terraform {
 
   backend "kubernetes" {
     secret_suffix = "common"
-
+    host ="${var.HOST}"
+    client_key ="${var.CLIENT_KEY}"
+    client_certificate ="${var.CLIENT_CERTIFICATE}"
+    cluster_ca_certificate ="${var.CLUSTER_CA_CERTIFICATE}"
   }
 }
 
 provider "helm" {
   kubernetes {
-
+    host ="${var.HOST}"
+    client_key ="${var.CLIENT_KEY}"
+    client_certificate ="${var.CLIENT_CERTIFICATE}"
+    cluster_ca_certificate ="${var.CLUSTER_CA_CERTIFICATE}"
   }
 }
 
